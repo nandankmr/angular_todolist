@@ -4,10 +4,13 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { TodosComponent } from './components/todos/todos.component';
+import { TodoItemComponent } from './components/todo-item/todo-item.component';
+import { TodoService } from './services/todo.service';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule ],
-  declarations: [ AppComponent, TodosComponent],
-  bootstrap:    [ AppComponent ]
+  declarations: [ AppComponent, TodosComponent, TodoItemComponent],
+  bootstrap:    [ AppComponent ],
+  providers: [TodoService]
 })
 export class AppModule { }
